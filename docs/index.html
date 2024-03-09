@@ -2,45 +2,182 @@
 <html>
   <head>
     <title>HackerRank</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
-      
+        body{
+            font-family: 'open sans';
+        }
+        :root {
+            --lhrc: rgb(59, 204, 96);
+            --nhrc: rgb(24, 128, 51);
+        }
+      .note {
+          display: flex;
+          background-color: var(--lhrc);
+          font-weight: bold;
+          color: white;
+      }
+      .btn1 {
+          background-color: white;
+          border-color: transparent;
+          margin: 10px;
+          color: var(--lhrc);
+          border-radius: 5px;
+      }
+      .btn1:hover {
+          background-color: #eee;
+      }
+      .container {
+          display: grid;
+          height: 600px;
+          width: 400px;
+          margin-left: 35%;
+          margin-top: 30px;
+      }
+      .top {
+          display: grid;
+          text-align: center;
+          margin-bottom: 10px;
+          height: 150px;
+      }
+      .main {
+          display: grid;
+          width: 370px;
+          background: white;
+          margin-left: 12.5px;
+          box-shadow: 0px 0px 20px #aaa;
+      }
+      .main1 {
+          height: 30px;
+          padding-top: 0px;
+          
+          display: grid;
+          grid-template-columns: repeat(2, 50%);
+          margin-bottom: 40px;
+      }
+      .heading-image {
+          height: 46px;
+          margin-left: 120px;
+      }
+      .lbl1, .lbl2 {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          padding-left: 30%;
+          box-shadow: 0px 0px 0px #aaa;
+          font-weight: bold;
+      }
+      .lbl1 {
+          background: #eee;
+      }
+      .lbl2 {
+          background: #fff;
+          z-index: 1;
+      }
+      .main2 {
+          display: grid;
+          padding: 10px;
+          background-color: #fff;
+          z-index: 2;
+      }
+      .input-tag {
+          height: 50px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          font-size: 20px;
+          padding-left: 10px;
+          border-color: #ddd;
+          border-width: 1px;
+      }
+      .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+        .main3 {
+            display: flex;
+            margin-left: 20px;
+        }
+        .remember {
+            margin-right: 50px;
+        }
+        .main4 {
+            margin-left: 70%;
+            margin-top: 10px;
+        }
+        .btn2 {
+            height: 40px;
+            width: 80px;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+            background-color: var(--nhrc);
+            border-color: transparent;
+            border-radius: 5px;
+        }
+        .main-down {
+            color: #999;
+            margin-left: 30%;
+        }
+        .down {
+            display: grid;
+            margin-left: 40px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .down-logo {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
     </style>
   </head>
   <body>
     <div class="note">
-      We use cookies to ensure you have the best browsing experience on our website. Please read our <a>cookie policy</a> for more information about how we use cookies.
-      <button>OK</button>
+      <p class="note-para">We use cookies to ensure you have the best browsing experience on our website. Please read our <a><u>cookie policy</u></a> for more information about how we use cookies.</p>
+      <button class="btn1">OK</button>
     </div>
     <div class="container">
       <div class="top">
-        <img src="logo1.jpg" class="heading-image">
+        <img src="https://cdn-images-1.medium.com/v2/resize:fill:1600:480/gravity:fp:0.5:0.4/1*UGT1Rh9xLww3JeIDR1F0RQ.png" class="heading-image">
         <h3>For Developers</h3>
         <p>Practice coding, prepare for interviews, and get hired.</p>
       </div>
       <div class="main">
         <div class="main1">
-          <label>Sign up</label>
-          <label>Log in</label>
+          <label class="lbl1">Sign up</label>
+          <label class="lbl2">Log in</label>
         </div>
         <div class="main2">
-          <input type="text" placeholder="Enter username or email" class="input-tag">
-          <input type="password" placeholder="Your password" class="input-tag">
+          <div class="main2-inp">
+            <span class="material-symbols-outlined">person</span>
+            <input type="text" placeholder="Your username or email" class="input-tag">
+          </div>
+          <div class="main2-inp">
+            <span class="material-symbols-outlined">lock</span>
+            <input type="password" placeholder="Your password" class="input-tag">
+          </div>
         </div>
         <div class="main3">
-          <input type="checkbox">
-          <label>Remember me</label>
-          <a>Forgot your password?</a>
+          <div class="remember">
+            <input type="checkbox" class="main3-checkbox">
+            <label>Remember me</label>
+          </div>
+          <a href="page02.html" style="color: black">Forgot your password?</a>
         </div>
         <div class="main4">
-          <button>Log In</button>
+          <button class="btn2">Log In</button>
         </div>
         <p class="main-down">or connect with</p>
-      </div>
-      <div class="down">
-        <img src="facebook.jpg" class="down-logo">
-        <img src="google.jpg" class="down-logo">
-        <img src="linkedin.jpg" class="down-logo">
-        <img src="github.jpg" class="down-logo">
+        <div class="down">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/2048px-Facebook_f_logo_%282021%29.svg.png" class="down-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1024px-Google_%22G%22_logo.svg.png" class="down-logo">
+          <img src="https://img.freepik.com/premium-vector/linkedin-app-icon-world-s-largest-professional-network-social-networking-jobs-careers_277909-476.jpg" class="down-logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="down-logo">
+        </div>
       </div>
     </div>
   </body>
