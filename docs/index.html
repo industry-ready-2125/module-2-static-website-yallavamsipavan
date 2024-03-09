@@ -2,17 +2,18 @@
 <html>
   <head>
     <title>HackerRank</title>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         body{
-            font-family: 'open sans';
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
         :root {
             --lhrc: rgb(59, 204, 96);
             --nhrc: rgb(24, 128, 51);
+            --dhrc: rgb(19, 99, 40);
         }
       .note {
+          padding-left: 20px;
           display: flex;
           background-color: var(--lhrc);
           font-weight: bold;
@@ -24,6 +25,8 @@
           margin: 10px;
           color: var(--lhrc);
           border-radius: 5px;
+          cursor: pointer;
+          margin-left: 320px;
       }
       .btn1:hover {
           background-color: #eee;
@@ -31,7 +34,7 @@
       .container {
           display: grid;
           height: 600px;
-          width: 400px;
+          width: 450px;
           margin-left: 35%;
           margin-top: 30px;
       }
@@ -43,15 +46,14 @@
       }
       .main {
           display: grid;
-          width: 370px;
+          width: 400px;
           background: white;
           margin-left: 12.5px;
-          box-shadow: 0px 0px 20px #aaa;
+          box-shadow: 5px 5px 20px #ccc;
       }
       .main1 {
           height: 30px;
           padding-top: 0px;
-          
           display: grid;
           grid-template-columns: repeat(2, 50%);
           margin-bottom: 40px;
@@ -62,10 +64,13 @@
       }
       .lbl1, .lbl2 {
           padding-top: 20px;
-          padding-bottom: 20px;
-          padding-left: 30%;
+          padding-bottom: 30px;
           box-shadow: 0px 0px 0px #aaa;
           font-weight: bold;
+          font-size: 20px;
+          height: 60px;
+          border-color: transparent;
+          cursor: pointer;
       }
       .lbl1 {
           background: #eee;
@@ -75,6 +80,7 @@
           z-index: 1;
       }
       .main2 {
+          margin-left: 20px;
           display: grid;
           padding: 10px;
           background-color: #fff;
@@ -82,6 +88,7 @@
       }
       .input-tag {
           height: 50px;
+          width: 280px;
           margin-bottom: 10px;
           border-radius: 5px;
           font-size: 20px;
@@ -97,8 +104,10 @@
           'opsz' 24
         }
         .main3 {
+            font-family: Arial, Helvetica, sans-serif;
             display: flex;
             margin-left: 20px;
+            cursor: pointer;
         }
         .remember {
             margin-right: 50px;
@@ -116,6 +125,10 @@
             background-color: var(--nhrc);
             border-color: transparent;
             border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn2:hover {
+            background-color: var(--dhrc);
         }
         .main-down {
             color: #999;
@@ -132,6 +145,7 @@
             height: 50px;
             width: 50px;
             border-radius: 50%;
+            cursor: pointer;
         }
     </style>
   </head>
@@ -144,12 +158,12 @@
       <div class="top">
         <img src="https://cdn-images-1.medium.com/v2/resize:fill:1600:480/gravity:fp:0.5:0.4/1*UGT1Rh9xLww3JeIDR1F0RQ.png" class="heading-image">
         <h3>For Developers</h3>
-        <p>Practice coding, prepare for interviews, and get hired.</p>
+        <p style="font-family: Arial, Helvetica, sans-serif">Practice coding, prepare for interviews, and get hired.</p>
       </div>
       <div class="main">
         <div class="main1">
-          <label class="lbl1">Sign up</label>
-          <label class="lbl2">Log in</label>
+          <button class="lbl1" onclick="loadSignupPage()">Sign up</button>
+          <button class="lbl2">Log in</button>
         </div>
         <div class="main2">
           <div class="main2-inp">
@@ -180,5 +194,10 @@
         </div>
       </div>
     </div>
+    <script>
+        function loadSignupPage() {
+            window.location.href="signup.html";
+        }
+    </script>
   </body>
 </html>
